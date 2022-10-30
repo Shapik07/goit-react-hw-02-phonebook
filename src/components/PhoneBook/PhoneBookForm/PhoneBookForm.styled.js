@@ -8,27 +8,27 @@ export const PhoneBookForm = styled.form`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
-  font-size: 24px;
+  margin-bottom: ${props => props.theme.spacing(3)};
+  font-size: ${props => props.theme.fontSizes.middle};
   font-weight: bold;
 `;
 
 export const Input = styled.input`
-  width: 300px;
-  height: 24px;
-  border-radius: 5px;
+  width: ${props => props.theme.spacing(75)};
+  height: ${props => props.theme.spacing(6)};
+  border-radius: ${props => props.theme.radii.standard};
 `;
 export const Button = styled.button`
-  width: 150px;
-  height: 36px;
+  width: ${props => props.theme.spacing(37.5)};
+  height: ${props => props.theme.spacing(9)};
   font-weight: bold;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 12px;
+  font-size: ${props => props.theme.fontSizes.small};
+  border-radius: ${props => props.theme.radii.standard};
+  margin-bottom: ${props => props.theme.spacing(3)};
   cursor: pointer;
 
   :hover {
-    color: white;
-    background-color: blue;
+    color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.blue};
   }
 `;
