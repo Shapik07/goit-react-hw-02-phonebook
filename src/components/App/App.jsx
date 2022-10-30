@@ -40,6 +40,8 @@ class App extends Component {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.name !== name),
     }));
+
+    this.setState({ filter: '' });
   };
 
   reset = () => {
