@@ -1,5 +1,4 @@
 import PropTypes, { string } from 'prop-types';
-import { nanoid } from 'nanoid';
 import {
   ContactList,
   ContactItem,
@@ -10,8 +9,8 @@ import {
 export const ContactsList = ({ contacts, onClick }) => {
   return (
     <ContactList className="contact-list">
-      {contacts.map(({ name, number }) => (
-        <ContactItem className="contact" key={nanoid()}>
+      {contacts.map(({ name, number, id }) => (
+        <ContactItem className="contact" key={id}>
           <ContactItemInfo>
             {name}: {number}
           </ContactItemInfo>

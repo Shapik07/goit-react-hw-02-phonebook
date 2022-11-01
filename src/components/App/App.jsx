@@ -44,10 +44,6 @@ class App extends Component {
     this.setState({ filter: '' });
   };
 
-  reset = () => {
-    this.setState({ name: '', number: '' });
-  };
-
   render() {
     const { filter, contacts } = this.state;
 

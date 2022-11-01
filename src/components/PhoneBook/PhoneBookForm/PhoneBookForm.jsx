@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import { PhoneBookForm, Label, Input, Button } from './PhoneBookForm.styled';
 
 class ContactForm extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     name: '',
     number: '',
   };
 
   nameInputId = nanoid();
-  numberInputId = nanoid();
-  contactId = nanoid();
 
   handleChangeInput = e => {
     const { name, value } = e.currentTarget;
@@ -32,7 +34,7 @@ class ContactForm extends Component {
   render() {
     return (
       <PhoneBookForm onSubmit={this.handleSubmit}>
-        <Label htmlFor={this.nameInputId}>
+        <Label>
           Name
           <Input
             type="text"
@@ -45,7 +47,7 @@ class ContactForm extends Component {
             id={this.nameInputId}
           />
         </Label>
-        <Label htmlFor={this.numberInputId}>
+        <Label>
           Number
           <Input
             type="tel"
@@ -64,9 +66,5 @@ class ContactForm extends Component {
     );
   }
 }
-
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default ContactForm;
