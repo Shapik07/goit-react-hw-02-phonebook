@@ -28,6 +28,7 @@ ContactsList.propTypes = {
     PropTypes.shape({
       name: string.isRequired,
       number: string.isRequired,
+      id: string.isRequired,
     })
   ),
   onClick: PropTypes.func.isRequired,
